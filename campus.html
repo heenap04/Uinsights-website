@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="campus.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <header class="header" id="header">
+    <!-- container for menu were menu content is stored in this -->
+    <div class="container">
+      <div class="navbar">
+        <!-- logo for menu -->
+        <div class="logo">
+          <img src="https://admissions.chitkara.edu.in/bundles/itmaticmain/assets/images/cu-logo.svg" height="40px"
+            alt="">
+        </div>
+        <!-- menu items list  -->
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="campus.html">Campus info</a></li>
+            <li><a href="#">Clubs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="admission.html">Admission</a></li>
+          </ul>
+        </nav>
+        <!-- menu icons -->
+        <div class="menu-icon" onclick="menutoggle()"><i class='bx bx-menu'></i></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- ============== HOME PAGE DESIGN =============== -->
+
+    <!-- Home Page Design -->
+    <section id="home">
+      <!-- container -->
+      <div class="row">
+        <div class="col-2">
+          <!-- container content -->
+          <h1>Welcome To<br> Chitkara University</h1>
+          <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium nostrum tempore provident
+            necessitatibus rerum asperiores accusamus voluptatum sint ratione non, quibusdam eveniet sunt nam
+            voluptatem architecto porro distinctio aut cupiditate!</p>
+          <!-- container button-->
+          <a href="#campus-info" class="btn">CAMPUS INFO &#8595;</a>
+        </div>
+        <div class="col-2">
+          <!-- container image  -->
+          <img
+            src="https://www.chitkara.edu.in/blogs/wp-content/uploads/2022/03/CUB4-Top-10-reasons-why-Chitkara-University-is-the-best-University-in-North-India.jpg"
+            alt="" class="floatimg">
+        </div>
+      </div>
+    </section>
+
+    <section class="campus-info" id="campus-info">
+      <div id="feature">
+        <!-- Featured product -->
+        <div class="small-container">
+          <!-- tittle of page  -->
+           
+          <div class="row">
+            <!-- container for feature product col-4-->
+            <div class="col-4">
+              <a href="#about" onclick="clickme1()"><img src="https://www.chitkara.edu.in/blogs/wp-content/uploads/2022/03/CUB4-Top-10-reasons-why-Chitkara-University-is-the-best-University-in-North-India.jpg" class="product-img" alt=""></a>
+              <h2>ABOUT</h2>
+            </div>
+
+            <div class="col-4" >
+              <a href="#food-court" onclick="clickme2()" >
+              <img src="https://www.collegebatch.com/static/clg-gallery/chitkara-university-rajpura-patiala-231419.jpg"
+                class="product-img" alt=""></a>
+                <h2>FOOD COURT</h2>
+            </div>
+            <div class="col-4">
+              <a href="#campus" onclick="clickme3()" >
+              <img src="https://www.collegebatch.com/static/clg-gallery/chitkara-university-rajpura-patiala-231427.jpg" alt="Image 3"  
+                class="product-img" alt=""></a>
+                <h2>CAMPUS</h2>
+            </div>
+            <div class="col-4">
+              <a href="#explortarium" onclick="clickme4()" >
+              <img src="https://www.chitkara.edu.in/wp-content/uploads/2023/04/audi2.webp" alt="Image 1" ></a>
+              <h2>EXPLORTARIUM</h2>
+            </div>
+    </section>
+
+
+    <section id="about" >
+       <!-- container -->
+       <div class="row">
+        <div class="col-2">
+          <!-- container content -->
+          <h1>ABOUT</h1>
+          <p>Welcome to our campus, a vibrant hub of learning and innovation nestled Rajpura, Punjab. Our campus offers a dynamic and inclusive environment where students from diverse backgrounds come together to learn, grow, and thrive. With state-of-the-art facilities, dedicated faculty, and a wide range of academic programs, we strive to provide our students with a holistic education that prepares them for success in their chosen fields. Whether you're interested in the arts, sciences, business, or technology, our campus has something for everyone. Join us and be a part of our community dedicated to excellence and achievement.</p>
+          <!-- container button-->
+           
+        </div>
+        <div class="col-2">
+          <!-- container image  -->
+          <img
+            src="https://www.chitkara.edu.in/blogs/wp-content/uploads/2022/03/CUB4-Top-10-reasons-why-Chitkara-University-is-the-best-University-in-North-India.jpg"
+            alt="" class="floatimg">
+        </div>
+      </div>
+    </section>
+
+
+    <section id="food-court">
+      <!-- container -->
+      <div class="row">
+       <div class="col-2">
+         <!-- container content -->
+         <h1>FOOD COURT</h1>
+         <p> WHAT YOU EAT IS WHAT YOU ARE!<br>
+          A healthy mind can only reside in a healthy body. Hence, all cafeterias have menus that are designed by a team of professional dieticians, and offer nutritious and wholesome food to ensure a well-balanced diet. Fresh fruit juices, milkshakes, ice creams sundaes and even midnight snacks are available in these cafeteria.</p>
+         <!-- container button-->
+          
+       </div>
+       <div class="col-2">
+         <!-- container image  -->
+         <img
+           src="https://www.collegebatch.com/static/clg-gallery/chitkara-university-rajpura-patiala-231419.jpg"
+           alt="" class="floatimg">
+       </div>
+     </div>
+   </section>
+
+
+
+   <section id="campus">
+    <!-- container -->
+    <div class="row">
+     <div class="col-2">
+       <!-- container content -->
+       <h1>CAMPUS</h1>
+       <p>Chitkara University, Punjab has made secure and safe arrangement of transport facility for students, staff & faculty. The transport facility is available from Chandigarh, Mohali, Kharar, Patiala, Derabassi, Panchkula, Ambala, Kalka, Zirakpur, Landran, Rajpura, Banur, Khanna, Sirhind, Doraha and Ludhina.</p>
+       <!-- container button-->
+        
+     </div>
+     <div class="col-2">
+       <!-- container image  -->
+       <img
+         src="https://www.collegebatch.com/static/clg-gallery/chitkara-university-rajpura-patiala-231427.jpg"
+         alt="" class="floatimg">
+     </div>
+   </div>
+ </section>
+
+
+ <section id="explortarium">
+  <!-- container -->
+  <div class="row">
+   <div class="col-2">
+     <!-- container content -->
+     <h1>EXPLORTARIUM</h1>
+     <p>The spacious, amphitheatre-style classrooms in the University provide the most conducive atmosphere for dynamic and focused discussions. They have been designed to bring together analysis with action and are augmented with integrated audio visual teaching aids for lectures, presentation, etc. Special sessions and classes are also held on business etiquettes, negotiation skills, effective communication, leadership, teamwork and analytical skills</p>
+     <!-- container button-->
+      
+   </div>
+   <div class="col-2">
+     <!-- container image  -->
+     <img
+       src="https://www.chitkara.edu.in/wp-content/uploads/2023/04/audi2.webp"
+       alt="" class="floatimg">
+   </div>
+ </div>
+</section>
+
+
+  </main>
+
+  
+
+  <footer class="footer">
+    <div class="logo">
+        <a href="index.html">
+            <img src="https://www.chitkara.edu.in/chitkaramun/images/chitkaralogo.png" alt="logo" width="150px" />
+        </a>
+    </div>
+    <div class="container2">
+        <div class="row">
+            <div class="footer-col">
+                <h4>CHITKARA UNIVERSITY (PUNJAB)</h4>
+                <p>Chandigarh-Patiala National Highway<br>
+                    Punjab 140 401</p>
+                <h4>ADMISSIONS OFFICE</h4>
+                <p>Unit No. A 201-202<br>
+                    Elante Mall Office Complex<br>
+                    Industrial Area Phase 1<br>
+                    Chandigarh 160 002
+                </p>
+
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Campus Info</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Clubs</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="#"><i class="bx bxl-twitter"></i></a>
+                    <a href="#"><i class="bx bxl-instagram"></i></a>
+                    <a href="#"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+  <!-- ================ JS CODE FOR MENU WORKING ==================== -->
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    // function is created to to open and close menu 
+    function menutoggle() {
+      if (MenuItems.style.maxHeight == "0px") {
+        MenuItems.style.maxHeight = "200px"
+      }
+      // if not equal then don't show the menubar
+      else {
+        MenuItems.style.maxHeight = "0px"
+      }
+    }
+
+    function clickme1(){
+      document.getElementById("about").style.display = "block";
+      document.getElementById("campus").style.display = "none";
+      document.getElementById("food-court").style.display = "none";
+      document.getElementById("explortarium").style.display = "none";
+    }
+
+    function clickme2(){
+      document.getElementById("about").style.display = "none";
+      document.getElementById("campus").style.display = "none";
+      document.getElementById("food-court").style.display = "block";
+      document.getElementById("explortarium").style.display = "none";
+    }
+    function clickme3(){
+      document.getElementById("about").style.display = "none";
+      document.getElementById("campus").style.display = "block";
+      document.getElementById("food-court").style.display = "none";
+      document.getElementById("explortarium").style.display = "none";
+    }
+    function clickme4(){
+      document.getElementById("about").style.display = "none";
+      document.getElementById("campus").style.display = "none";
+      document.getElementById("food-court").style.display = "none";
+      document.getElementById("explortarium").style.display = "block";
+    }
+  </script>
+</body>
+
+</html>

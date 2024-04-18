@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADDMISSION CHITKARA UNIVERSITY</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="admission.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <!-- container for menu were menu content is stored in this -->
+            <div class="navbar">
+                <!-- logo for menu -->
+                <div class="logo">
+                    <img src="https://admissions.chitkara.edu.in/bundles/itmaticmain/assets/images/cu-logo.svg"
+                        height="40px" alt="">
+                </div>
+                <!-- menu items list  -->
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="campus.html">Campus info</a></li>
+                        <li><a href="#">Clubs</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="admission.html">Admission</a></li>
+                    </ul>
+                </nav>
+                <!-- menu icons -->
+                <div class="menu-icon" onclick="menutoggle()"><i class='bx bx-menu'></i></div>
+            </div>
+    </header>
+    <!-- MAIN PAGE DEISGN  -->
+    <main>
+        <!-- admission home page design -->
+        <section class="adm-home" id="adm-home">
+            <div class="adm-container">
+                <h1 class="adm-home-heading">WELCOME TO CHITKARA UNIVERSITY</h1>
+                <p class="adm-home-parg">Welcome to Chitkara University's Online Application System for Academic
+                    Programs.<br>The Application Forms for Admissions 2024 are now open.</p>
+                <a href="#col-2" class="adm-home-btn">ADMISSION</a>
+            </div>
+        </section>
+        <!-- Admission form and potenial design -->
+        <div class="adm-form-potential">
+            <div class="col-1">
+                <img src="https://admissions.chitkara.edu.in/bundles/itmaticmain/assets/images/cu-logo.svg" alt=""
+                    class="cu-img">
+                <h2 class="potential-head">Explore Your <span class="p-red">Potential</span></h2>
+                <p class="content">Welcome to Chitkara University's Online Application System for Academic
+                    Programs - Year 2024 at University campuses in Punjab & Himachal Pradesh.
+                    <br><br>
+                    The Application Forms for Admissions 2024 are now open. This portal is currently open to
+                    Indian Nationals Only. You can save your application at any point and return to it later.
+                    You will be required to provide supporting documentation. If you don't have your documents
+                    available at this time you can provide them to us at a later date.
+                </p>
+            </div>
+            <div class="col-1" id="col-2">
+                <h1 class="adm-potential-head">ADMISSION FORM</h1>
+                <form class="adm-form">
+                    <div class="input">
+                        <label for="name">NAME:</label>
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+                    </div>
+                    <div class="input">
+                        <label for="fname">FATHER NAME:</label>
+                        <input type="text" name="fanme" id="fname" placeholder="Enter Your Father Name" required>
+                    </div>
+                    <div class="input">
+                        <label for="num">MOBILE NO:</label>
+                        <input type="tel" name="number" id="number" maxlength="10"
+                            placeholder="Enter Your Mobile Number" required>
+                    </div>
+                    <div class="input">
+                        <label for="e-mail">E-MAIL:</label>
+                        <input type="email" name="e-mail" id="e-mail" placeholder="Enter Your E-mail" required>
+                    </div>
+                    <div class="input">
+                        <label for="program">SELECT PROGRAMM:</label>
+                        <select name="programm" id="programm" required>
+                            <option value="" class="programm">Select Programm</option>
+                            <option value="be" class="programm">B.E</option>
+                            <option value="me" class="programm">M.E</option>
+                            <option value="bca" class="programm">BCA</option>
+                            <option value="mca" class="programm">MCA</option>
+                            <option value="bba" class="programm">BBA</option>
+                            <option value="mba" class="programm">MBA</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <input type="submit" value="SUBMIT" name="submit" id="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="container1">
+                <div class="row">
+                    <div class="footer-1">
+                        <!-- <img src="https://admissions.chitkara.edu.in/bundles/itmaticmain/assets/images/cu-logo.svg" alt=""> -->
+                        <h3>E-mail</h3>
+                        <form class="form1">
+                            <i class='bx bxs-envelope'></i>
+                            <input type="email" placeholder="Enter your email id" class="input1" required>
+                            <button type="submit"><i class='bx bxs-right-arrow-alt'></i></button>
+                        </form>
+                        <div class="social-icon">
+                            <a href="https://www.facebook.com/ChitkaraU"> <i class='bx bxl-facebook'></i></a>
+                            <a href="https://www.instagram.com/ChitkaraU"><i class='bx bxl-instagram-alt'></i></a>
+                            <a href="https://www.twitter.com/ChitkaraU"><i class='bx bxl-twitter'></i></a>
+                            <a href="https://www.youtube.com/ChitkaraU"><i class='bx bxl-youtube'></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-2">
+                        <span><a href="mailto:admissions@chitkara.edu.in"><i class='bx bx-envelope'></i></a></span>
+                        <p> admissions@chitkara.edu.in<br>careers@chitkara.edu.in</p>
+                    </div>
+                    <div class="footer-3">
+                        <span><a href="tel:9501105714"><i class='bx bx-phone'></i></a></span>
+                        <p> +91 950 110 5714
+                            <br>+91 950 110 5715
+                        </p>
+
+                    </div>
+                    <div class="footer-3">
+                        <span><a href="https://maps.app.goo.gl/rkyWP9wBWEX5D6f86"><i class='bx bx-map'></i></a></span>
+                        <p>Unit No. A 201-202<br>
+                            Elante Mall Office Complex<br>
+                            Industrial Area Phase 1<br>
+                            Chandigarh 160 002
+                        </p>
+                    </div>
+                </div>
+                <!-- copyright and line at bottom -->
+                <hr>
+                <p class="power">POWERD BY TEAM &#8594; U-INSIGHTS</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ================ JS CODE FOR MENU WORKING ==================== -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        // function is created to to open and close menu 
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            // if not equal then don't show the menubar
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+</body>
+
+</html>

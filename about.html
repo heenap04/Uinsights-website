@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitkara University</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('chitkara.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            color: brown;
+        }
+
+        section {
+            padding: 20px;
+            border-radius: 10px;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+            margin: 0px auto;
+            padding-top: 70px;
+            max-width: 800px;
+            /* background-color: rgba(255, 255, 255, 0.8); */
+            text-align: center;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            scroll-behavior: smooth;
+        }
+
+        *::-webkit-scrollbar {
+            width: 0;
+        }
+
+        /* body {
+            font-family: 'poppins', sans-serif;
+            background: #fff;
+        } */
+
+        header {
+            position: fixed;
+            border-bottom: .1px solid rgba(0, 0, 0, .2);
+            z-index: 2;
+            width: 100%;
+            background: #353535;
+            padding-right: 20px;
+            line-height: 0;
+        }
+
+        .logo {
+            padding-left: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            flex-basis: 60%;
+        }  
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            margin-left: 20px;
+            display: none;
+            color: #fff;
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .cu-container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #2c3e50;
+        }
+
+        p {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        .mission ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .mission li {
+            margin-bottom: 10px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        /* .mission li::before {
+            content: "\2022";
+            color: #e74c3c;
+            font-size: 16px;
+            position: absolute;
+            left: 0;
+            top: 6px;
+        } */
+
+        .cu-footer {
+            background-color: #333;
+            color: #f4f4f4;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #24262b;
+            padding: 70px 0;
+        }
+
+        .logo {
+            margin-top: 10px;
+            margin-left: 10px;
+            left: 15px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 15px 15px;
+            margin-left: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-top: 20px;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e1e;
+            height: 2px;
+            box-sizing: border-box;
+            width: 70px;
+        }
+
+        .footer-col p {
+            color: #fff;
+            font-size: 15px;
+            margin-left: 20px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer ul li{
+            list-style: none;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+         @media(max-width: 767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media(max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+
+        .text21 {
+            /* display:inline-block; */
+            overflow: hidden;
+            white-space: nowrap;
+            text-align: center;
+            color: #fa0505;
+            font-family: 'Playfair-Display';
+            font-weight: 900;
+            font-size: 32px;
+            padding-top: 10px;
+            margin-left: 40vw;
+            margin-top: 20px;
+            backface-visibility: hidden;
+            position: absolute;
+            /* -webkit-perspective: 1000;
+      -webkit-transform: translate3d(0,0,0); */
+        }
+
+        .main {
+            animation: showup 7s infinite;
+            color: #525252;
+            font-size: 60px;
+            font-weight: 900;
+        }
+
+        .main2 {
+            width: 0px;
+            /* animation: reveal 7s infinite; */
+        }
+
+        .main2 span {
+            margin-left: -355px;
+            animation: slidein 7s infinite;
+        }
+
+        @keyframes showup {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes slidein {
+            0% {
+                margin-left: -800px;
+            }
+
+            20% {
+                margin-left: -800px;
+            }
+
+            35% {
+                margin-left: 0px;
+            }
+
+            100% {
+                margin-left: 0px;
+            }
+        }
+
+        @keyframes reveal {
+            0% {
+                opacity: 0;
+                width: 0px;
+            }
+
+            20% {
+                opacity: 1;
+                width: 0px;
+            }
+
+            30% {
+                width: 355px;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                width: 355px;
+            }
+        }
+
+        .admission {
+            color: red;
+        }
+
+
+        .info {
+            position: absolute;
+            left: 25vw;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 70px;
+
+        }
+
+        .waviy {
+            -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+            font-size: 60px;
+        }
+
+        .waviy span {
+            font-family: "Kanit", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            position: relative;
+            display: inline-block;
+            color: #fff;
+            text-transform: uppercase;
+            animation: waviy 1s infinite;
+            animation-delay: calc(.1s * var(--i));
+
+        }
+
+        @keyframes waviy {
+
+            0%,
+            40%,
+            100% {
+                transform: translateY(0)
+            }
+
+            20% {
+                transform: translateY(-20px)
+            }
+        }
+
+        @media (max-width:866px) {
+
+nav ul {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #353535;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+nav ul li {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 20px;
+}
+
+.menu-icon {
+    display: block;
+    cursor: pointer;
+}
+}
+
+    </style>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <!-- container for menu were menu content is stored in this -->
+        <div class="container">
+            <div class="navbar">
+                <!-- logo for menu -->
+                <div class="logo">
+                    <img src="https://admissions.chitkara.edu.in/bundles/itmaticmain/assets/images/cu-logo.svg"
+                        height="40px" alt="">
+                </div>
+                <!-- menu items list  -->
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="campus.html">Campus info</a></li>
+                        <li><a href="#">Clubs</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="admission.html">Admission</a></li>
+                    </ul>
+                </nav>
+                <!-- menu icons -->
+                <div class="menu-icon" onclick="menutoggle()"><i class='bx bx-menu'></i></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="cu-container">
+                <h1>Explore Your Potential</h1>
+                <p>Our logo depicts the arrows in soaring heights, promising everlasting progress. It also illustrates
+                    the
+                    interlinking of our key stakeholders namely Students, Parents, Faculty, Alumni, Industry and Society
+                    as
+                    a whole, working in synergy towards a common goal which is the “Everlasting Success of Each Chitkara
+                    Student and creating them as responsible citizens”. The colour Red denotes Energy & Passion to
+                    “Explore
+                    Our Potential”.</p>
+            </div>
+
+            <div class="cu-container">
+                <h2>ABOUT CHITKARA UNIVERSITY</h2>
+                <p>Established in 2002 by the Chitkara Educational Trust, Chitkara University emerged as a beacon of
+                    educational excellence in Punjab, India. Officially recognized by the Punjab State Legislature under
+                    “The Chitkara University Act” in 2010, the institution has been committed to providing high-quality
+                    education that is both globally recognized and industry-relevant.
+                    <br><br>
+                    Situated on a sprawling campus conveniently located between Chandigarh, Mohali, Panchkula, Ambala,
+                    and
+                    Patiala, Chitkara University offers a diverse range of multidisciplinary programs. From business
+                    management to nursing, computer science to hotel management, the university provides a comprehensive
+                    educational experience that prepares students for success in their chosen fields.
+                    <br><br>
+                    At the heart of Chitkara University's ethos lies a dedication to academic excellence, fueled by
+                    state-of-the-art infrastructure, modern classrooms, and well-equipped laboratories. The university
+                    fosters a dynamic learning environment where students are encouraged to participate in co-curricular
+                    and
+                    extracurricular activities, ensuring holistic growth and development.
+                    <br><br>
+                    Chitkara University takes pride in its strong national and international collaborations, which not
+                    only
+                    enhance academic standards but also offer students valuable opportunities for global exposure. The
+                    campus boasts a vibrant multicultural community, with a significant number of international students
+                    contributing to the rich tapestry of diversity.
+                </p>
+
+            </div>
+
+            <div class="cu-container">
+                <h2>VISION & MISSION</h2>
+                <h3>VISION:</h3>
+                <p>To be a globally recognized institution dedicated to advancing academic excellence through
+                    interdisciplinary research and innovation.</p>
+
+            </div>
+
+            <div class="cu-container">
+                <h3>MISSION:</h3>
+                <p>
+                <ul style="list-style-type: none" class="mission">
+                    <li style="list-style-type: none">To uphold global standards of education through active engagement
+                        with
+                        teachers, students, and industry partners.</li>
+                    <li style="list-style-type: none">To foster a culture of research, innovation, and entrepreneurship
+                        in
+                        collaboration with leading industry and academic institutions worldwide.</li>
+                    <li style="list-style-type: none">To instill ethical values and professional integrity in our
+                        students,
+                        faculty, and staff, nurturing responsible citizens and leaders.</li>
+                    <li style="list-style-type: none">To contribute to the development of a skilled society through
+                        education and community engagement.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="cu-container">
+                <h2>OUR VALUES</h2>
+                <p>At Chitkara University, we uphold a set of core values that guide our actions and decisions:</p>
+
+                <p>
+                <ul>
+                    <li><b>Care:</b> Prioritizing the welfare of our students and employees.</li>
+                    <li><b>Support:</b> Going above and beyond to support all stakeholders.</li>
+                    <li><b>Academic Excellence:</b> Striving for excellence in teaching, learning, and research.</li>
+                    <li><b>Integrity:</b> Conducting ourselves with honesty, transparency, and ethicality.</li>
+                    <li><b>Diversity:</b> Embracing and promoting diversity in all aspects of university life.</li>
+                    <li><b>Innovation:</b> Encouraging creativity and embracing innovative solutions.</li>
+                    <li><b>Collaboration:</b> Building meaningful partnerships for collective growth and success.</li>
+                    <li><b>Accountability:</b> Taking responsibility for our actions and outcomes.</li>
+                    <li><b>Social Responsibility:</b> Promoting social mobility and access to education for all.</li>
+
+                </ul>
+                </p>
+
+            </div>
+
+            <div class="cu-container">
+                <p><b>Join us at Chitkara University, where we empower individuals to explore their potential and make a
+                        positive impact on the world.</b></p>
+            </div>
+            <!-- </div> -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://www.chitkara.edu.in/chitkaramun/images/chitkaralogo.png" alt="logo" width="150px" />
+            </a>
+        </div>
+        <div class="container2">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>CHITKARA UNIVERSITY (PUNJAB)</h4>
+                    <p>Chandigarh-Patiala National Highway<br>
+                        Punjab 140 401</p>
+                    <h4>ADMISSIONS OFFICE</h4>
+                    <p>Unit No. A 201-202<br>
+                        Elante Mall Office Complex<br>
+                        Industrial Area Phase 1<br>
+                        Chandigarh 160 002
+                    </p>
+
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Campus Info</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Clubs</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="bx bxl-facebook"></i></a>
+                        <a href="#"><i class="bx bxl-twitter"></i></a>
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                        <a href="#"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+    <div class="cu-footer">
+        Quick Links Admissions | Eligibility & Fees - MBA Programs | Eligibility & Fees - PhD Programs | Eligibility &
+        Fees - UG Programs | Eligibility & Fees - PG Programs | Download Forms | Admission Helpline Numbers |
+        Availability of Forms | Join Us!
+    </div>
+
+    <!-- ================ JS CODE FOR MENU WORKING ==================== -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        // function is created to to open and close menu 
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            // if not equal then don't show the menubar
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+</body>
+
+</html>
